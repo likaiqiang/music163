@@ -1,0 +1,36 @@
+.hotTop{
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    background: url('http://s3.music.126.net/m/s/img/hot_music_bg_3x.jpg?2bfefd3ba37eaffbd66b7d108b9de26a') no-repeat center center;
+    h3{
+        width: 142px;
+        height: 67px;
+        background: url('http://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880') no-repeat -24px -30px/166px 97px;
+    }
+    .hottime{
+        margin-top: 10px;
+        color: hsla(0,0%,100%,.8);
+        font-size: 12px;
+    }
+}
+.hotList{
+    display: flex;
+    align-items: center;
+    .number{
+        width: 28px;
+        font-size: 17px;
+        color: #999;
+        text-align: center;
+    }
+    &.hot{
+        .number{
+            color: #df3436;
+        }
+    }
+    .listPanel{
+        flex: 1;
+    }
+}

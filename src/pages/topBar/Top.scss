@@ -1,0 +1,28 @@
+.topBar{
+    background-color: #d43c33;
+    display: flex;
+    padding: 15px 10px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    h1{
+        font-size: 0;
+        text-indent: -100px;
+    }
+    a{
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        color: #fff;
+        font-size: 15px;
+        border:1px solid;
+        border-radius: 10px;
+    }
+    svg{
+        width: 142px;
+        height: 25px;
+        position: absolute;
+        left: 10px;
+        top: 20px;
+    }
+}

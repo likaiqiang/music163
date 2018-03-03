@@ -1,0 +1,54 @@
+.songList{
+    padding-top: 20px;
+    h2{
+        position: relative;
+        padding-left: 9px;
+        margin-bottom: 14px;
+        font-size: 17px;
+        height: 20px;
+        line-height: 20px;
+        &::after{
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -9px;
+            width: 2px;
+            height: 16px;
+            background-color: #d33a31;
+        }
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li{
+            width: 33%;
+            margin-bottom: 16px;
+            .pic{
+                position: relative;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+                .playCount{
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                    color: white;
+                    span{
+                        
+                    }
+                }
+            }
+            >p{
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                padding: 6px 2px 0 6px;
+                line-height: 1.2;
+                font-size: 13px;
+            }
+        }
+    }
+}

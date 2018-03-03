@@ -1,0 +1,31 @@
+.listPanel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    position: relative;
+    .title{
+        font-size: 17px;
+        color: #333;
+    }
+    .subTitle{
+        font-size: 12px;
+        .hot{
+            display: inline-block;
+            margin-right: 5px;
+            color: #d43c33;
+        }
+    }
+    .control{
+        font-size: 24px;
+    }
+    &::after{
+        content: " ";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: rgba(0,0,0,.1)
+    }
+}
