@@ -81,6 +81,9 @@ class Playing extends Component{
             _this.progressTimer = setInterval(_this.activeProgressBar, 300)
         })
     }
+    componentWillUnmount(){
+        clearInterval(this.progressTimer)
+    }
     play(){
         this.audio.play()
         this.setState({
