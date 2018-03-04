@@ -10,7 +10,8 @@ export class ContextProvider extends React.Component{
         this.control = this.control.bind(this)
         this.state = {
             paused: true,
-            audio:null
+            audio:null,
+            curMusicId:null
         }
     }
     render(){
@@ -32,9 +33,12 @@ export class ContextProvider extends React.Component{
             audio:this.audio
         })
     }
-    initAudio(url){
+    initAudio(url,id){
         this.audio.src = url
         this.play()
+        this.setState({
+            curMusicId:id
+        })
     }
     play(){
         this.audio.play()

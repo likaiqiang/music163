@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import {Link} from 'react-router-dom'
 import './listPanel.scss'
 // import Proptypes from 'prop-types'
 
@@ -25,7 +26,7 @@ class ListPanel extends Component{
                         </span>
                     </p>
                 </div>
-                <i className="control iconfont icon-play"></i>
+                <Link className="control iconfont icon-play" to={`/playing/${id}`}></Link>
             </li>
         )
     }

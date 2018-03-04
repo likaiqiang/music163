@@ -15,6 +15,7 @@ ReactDOM.render(
         <Router>
             <Switch>
                 <Route path='/app' component={App}></Route>
+                <Route path='/playing/:id' component={Playing}></Route>
                 <Route path='/playing' component={Playing}></Route>
                 <Redirect from='/' to='/app/rec'></Redirect>
             </Switch>
