@@ -8,10 +8,14 @@ export class ContextProvider extends React.Component{
         this.play = this.play.bind(this)
         this.pause = this.pause.bind(this)
         this.control = this.control.bind(this)
+        this.saveLrcTop = this.saveLrcTop.bind(this)
+        this.saveLrc = this.saveLrc.bind(this)
         this.state = {
             paused: true,
             audio:null,
-            curMusicId:null
+            curMusicId:null,
+            lrcTop:null,
+            lrc:[]
         }
     }
     render(){
@@ -19,7 +23,9 @@ export class ContextProvider extends React.Component{
             initAudio:this.initAudio,
             play:this.play,
             pause:this.pause,
-            control:this.control
+            control:this.control,
+            saveLrcTop:this.saveLrcTop,
+            saveLrc:this.saveLrc
         }
         return (
             <Context.Provider value={{data:{...this.state},methods:{...methods}}}>
@@ -56,6 +62,16 @@ export class ContextProvider extends React.Component{
         this.state.paused?this.audio.play():this.audio.pause()
         this.setState({
             paused:!this.state.paused
+        })
+    }
+    saveLrcTop(top){
+        this.setState({
+            lrcTop:top
+        })
+    }
+    saveLrc(lrc){
+        this.setState({
+            lrc
         })
     }
 }
