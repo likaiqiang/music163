@@ -66,13 +66,11 @@ class Playing extends Component {
             })
         }
         else{
-            if(id==curMusicId){
-                this.progressTimer = setInterval(this.activeProgressBar, 300)
-                this.setState({
-                    lrcTop:this.props.context.data.lrcTop,
-                    lrc:this.props.context.data.lrc
-                })
-            }
+            this.progressTimer = setInterval(this.activeProgressBar, 300)
+            this.setState({
+                lrcTop:this.props.context.data.lrcTop,
+                lrc:this.props.context.data.lrc
+            })
         }
         this.progressBtn.addEventListener('touchstart', function (e) {
             clearInterval(_this.progressTimer)
@@ -108,6 +106,9 @@ class Playing extends Component {
     }
     activeProgressBar() {
         var percentNum = Math.floor((this.props.context.data.audio.currentTime / this.props.context.data.audio.duration) * 10000) / 100 + '%';
+        if(this.props.context.data.audio.currentTime / this.props.context.data.audio.duration >=1){
+            this.props.context.methods.pause()
+        }
         this.progress.style.width = percentNum;
         this.progressBtn.style.left = percentNum;
         this.scrollLrc()
