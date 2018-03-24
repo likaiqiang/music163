@@ -1,0 +1,27 @@
+.searchWrap{
+    padding: 15px 10px;
+    color: #333;
+    display: flex;
+    position: relative;
+    i{
+        position: absolute;
+        width: 30px;
+    }
+    .searchIcon{
+        left: 18px;
+        top: 20px;
+    }
+    .searchClear{
+        right: 8px;
+        top: 20px;
+    }
+    input{
+        flex: 1;
+        padding: 0 30px;
+        border-width: 0px;
+        outline:none;
+        background-color: #ebecec;
+        height: 30px;
+        border-radius: 30px;
+    }
+}
