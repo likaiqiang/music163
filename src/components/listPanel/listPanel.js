@@ -17,13 +17,17 @@ class ListPanel extends Component{
                         {
                             isHot?<i className="hot iconfont icon-hot"></i>:null
                         }
-                        <span>
-                            {
-                                ar.length ? ar.map((o,i)=>{
-                                    return o.name
-                                }).join('/'):name
-                            }
-                        </span>
+                        {
+                            typeof ar != 'undefined' ? (
+                                <span>
+                                    {
+                                        ar.length ? ar.map((o,i)=>{
+                                            return o.name
+                                        }).join('/'):name
+                                    }
+                                </span>
+                            ):null
+                        }
                     </p>
                 </div>
                 <Link className="control iconfont icon-play" to={`/playing/${id}`}></Link>

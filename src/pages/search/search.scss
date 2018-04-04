@@ -25,3 +25,19 @@
         border-radius: 30px;
     }
 }
+.searchHistory{
+    li{
+        display: flex;
+        align-items: center;
+        .time{
+            margin: 0 10px;
+        }
+        >div{
+            flex: 1;
+            overflow: hidden;
+            .close{
+                float: right;
+            }
+        }
+    }
+}

@@ -63,3 +63,15 @@ export const getLrc = (id)=>{
         })
     })
 }
+export const search = (kw)=>{
+    return new Promise((resolve,reject)=>{
+        axios.get(`${baseUrl}/search?keywords=${kw}`).then(response=>{
+            if(response.data.code == 200){
+                return resolve(response.data.result.songs)
+            }
+            else{
+                return  reject(response)
+            }
+        })
+    })
+}

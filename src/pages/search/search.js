@@ -1,18 +1,22 @@
 import React,{Component} from "react"
+import ListPanel from '@/components/listPanel/listPanel.js'
+import {search} from '@/fetch.js'
 import "./search.scss"
 class Search extends Component{
     constructor(){
         super(...arguments)
         this.state = {
-            value:''
+            value:'',
+            data:[]
         }
         this.inputChange = this.inputChange.bind(this)
         this.clear = this.clear.bind(this)
+        this.submit = this.submit.bind(this)
     }
     render(){
         return (
             <div>
-                <form className="searchWrap">
+                <form className="searchWrap" onSubmit={this.submit}>
                     <i className="searchIcon iconfont icon-search"></i>
                     <input type="text" value={this.state.value} onChange={this.inputChange}/>
                     {
@@ -20,7 +24,11 @@ class Search extends Component{
                     }
                 </form>
                 <ul>
-                    <li>当那一天来临</li>
+                    {
+                        this.state.data.map((item,index)=>{
+                            return <ListPanel key={index} data={{...item}} />
+                        })
+                    }
                 </ul>
             </div>
         )
@@ -34,6 +42,17 @@ class Search extends Component{
         this.setState({
             value:''
         })
+    }
+    submit(e){
+        e.preventDefault()
+        var value = this.state.value.trim()
+        if(value.length){
+            search(value).then(response=>{
+                this.setState({
+                    data:response
+                })
+            })
+        }
     }
 }
 
