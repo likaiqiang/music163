@@ -23,7 +23,7 @@ class Search extends Component{
                         this.state.value.trim().length>0?<i className="searchClear iconfont icon-close" onClick={this.clear}></i>:null
                     }
                 </form>
-                <ul>
+                <ul className="searchResolut">
                     {
                         this.state.data.map((item,index)=>{
                             return <ListPanel key={index} data={{...item}} />
