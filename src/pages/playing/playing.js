@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { getMusic, getLrc } from '@/fetch.js'
-import {ContextConsumer} from '@/context/index'
+import {ContextConsumer} from '@/context/index.js'
 
 import './playing.scss'
 

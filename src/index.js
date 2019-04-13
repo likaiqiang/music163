@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
-import {ContextProvider} from '@/context/index'
+import {ContextProvider} from '@/context/index.js'
 
 import './index.css'
 import App from './App'
