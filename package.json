@@ -51,9 +51,10 @@
     "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
-    "start": "node scripts/start.js && node api/app.js",
+    "start": "npm run build && npm run server",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "dev": "node scripts/start.js",
+    "server": "node api/app.js"
   },
   "jest": {
     "collectCoverageFrom": [

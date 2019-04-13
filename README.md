@@ -4,4 +4,4 @@ react仿网易云音乐webapp
 
 yarn server
 
-yarn start
+yarn dev

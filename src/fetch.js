@@ -1,5 +1,8 @@
 import axios from 'axios'
 const baseUrl = 'http://localhost:3008'
+if(NODE_ENV == 'production'){
+  baseUrl = "https://music-163.herokuapp.com/"
+}
 
 export const getNewMusic = ()=>{
     return new Promise((resolve,reject)=>{
