@@ -1,5 +1,6 @@
 import axios from 'axios'
-let baseUrl = 'http://localhost:3008'
+// let baseUrl = 'http://localhost:3008'
+let baseUrl = 'http://45.32.28.180:3008'
 if(process.env.NODE_ENV == 'production'){
   baseUrl = "https://music-163.herokuapp.com/"
 }
